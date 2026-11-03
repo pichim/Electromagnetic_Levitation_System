@@ -1,0 +1,41 @@
+
+Mit RPI verbinden:
+	- ssh sphere@Levitationsystem (user@hostname)
+	- falls frage: mit "yes" quittieren
+	- PW: PA2026
+	
+Dateien auf RPI laden:
+	- scp tracker.py sphere_core.py sphere@LevitationSystem.local:  
+	
+Aufgehängter Prozess beenden:
+	- Get-Process python | Stop-Process
+	- Muss in zweiter konsole ausgeführt werden
+	
+	
+Remote SSH VS Code extension:
+	- Damit kann via VSCode direkt auf dem RPI gearbeitet werden
+	1) F1
+	2) Remote-SSH: Connect to Host
+	3) levi-pi
+	4) linux
+	
+Kamera:
+	- "Ping" 
+		- rpicam-hello --list-cameras
+	- Foto:
+		- rpicam-still -o test.jpg --timeout 2000
+		- In Windows im Ordner: scp sphere@LevitationSystem.local:test.jpg .
+		
+	- Video Stream:
+		- rpicam-vid -t 0 --inline --listen -o tcp://0.0.0.0:8888
+		- In VLC: Medien --> Netzwerkstream: tcp/h264://LevitationSystem.local:8888 --> Wiedergabe
+		- 
+		Oder: 
+		- rpicam-vid -t 0 --codec mjpeg --listen --width 640 --height 400 --framerate 30 -o tcp://0.0.0.0:8888
+		- Windows: cd "C:\GIT\Electromagnetic_Levitation_System\01_Raspberry_Pi_Camera"
+		- uv run viewer.py (zum debuggen)
+		- uv run receiver.py (für positionsergebnisse)
+		- Stream beenden falls aufgehängt: sudo pkill -f rpicam
+		
+		
+	

@@ -1,0 +1,9 @@
+	
+	Verbesserungen:
+	1) Grosser Kontrast zwischen Hintergrund und Kugel, gut beleuchten
+	2) Optimum von Bildrate und Auflösung finden (Messungen)
+	3) max_iters in tracker.py optimieren
+	4) Alte position merken, um neue position zu finden
+	5) USE_FIT = False (nur schwerpunkt verwenden)
+	6) C++
+	7) Hintergrundbild merken und dann von Bild mit Kugel subtrahieren --> somit nurnoch Kugel auf dem Bild
