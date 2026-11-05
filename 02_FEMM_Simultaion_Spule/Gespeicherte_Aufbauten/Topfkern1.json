@@ -1,0 +1,98 @@
+{
+  "format": "femm-schwebelabor-settings",
+  "version": 5,
+  "config": {
+    "title": "Koaxiale Elektromagnete",
+    "upper_gap": 30.0,
+    "lower_gap": 15.0,
+    "upper": {
+      "core_d": 40.0,
+      "core_l": 115.0,
+      "coil_id": 44.0,
+      "coil_od": 115.0,
+      "coil_h": 90.0,
+      "coil_offset": 10.0,
+      "turns": 1536.0,
+      "current": 3.0,
+      "material": "1018 Steel",
+      "wire_d_mm": 1.32,
+      "wire_od_mm": 1.4,
+      "enabled": true,
+      "core_kind": "pot",
+      "pot_inner_d": 125.0,
+      "pot_outer_d": 170.0,
+      "pot_back_h": 10.0
+    },
+    "lower": {
+      "core_d": 40.0,
+      "core_l": 80.0,
+      "coil_id": 42.0,
+      "coil_od": 79.4,
+      "coil_h": 60.0,
+      "coil_offset": 10.0,
+      "turns": 918.0,
+      "current": 0.393,
+      "material": "1010 Steel",
+      "wire_d_mm": 1.0,
+      "wire_od_mm": null,
+      "enabled": false,
+      "core_kind": "rod",
+      "pot_inner_d": 86.0,
+      "pot_outer_d": 96.0,
+      "pot_back_h": 10.0
+    },
+    "object": {
+      "enabled": true,
+      "kind": "solid",
+      "diameter": 10.0,
+      "wall": 1.0,
+      "material": "1010 Steel",
+      "density": 7850.0,
+      "measured_mass_g": null,
+      "pm_d": 6.0,
+      "pm_h": 2.0,
+      "pm_z": 0.0,
+      "pm_material": "NdFeB 37 MGOe",
+      "pm_direction": 1
+    },
+    "numerics": {
+      "mesh_mm": 0.6,
+      "air_mesh_mm": 10.0,
+      "domain_factor": 4.0,
+      "arc_deg": 3.0,
+      "solver_precision": 1e-08,
+      "equilibrium_tolerance_n": 0.0002,
+      "current_tolerance_a": 0.0001
+    }
+  },
+  "sweeps": {
+    "current_start": 0.0,
+    "current_end": 4.0,
+    "current_step": 0.5,
+    "gap_start": 10.0,
+    "gap_end": 20.0,
+    "gap_step": 5.0,
+    "search_start": 0.0,
+    "search_end": 6.0,
+    "scan_points": 9.0
+  },
+  "temperature": {
+    "side": "upper",
+    "parameters": {
+      "ambient_c": 20.0,
+      "duration_min": 60.0,
+      "limit_c": 100.0,
+      "h_copper": 8.0,
+      "h_core": 8.0,
+      "coupling_w_k": 0.3,
+      "copper_exposed_percent": 100.0,
+      "core_exposed_percent": 100.0,
+      "initial_c": null,
+      "copper_density": 8930.0,
+      "copper_cp": 385.0,
+      "core_density": 7870.0,
+      "core_cp": 450.0,
+      "copper_alpha": 0.00393
+    }
+  }
+}

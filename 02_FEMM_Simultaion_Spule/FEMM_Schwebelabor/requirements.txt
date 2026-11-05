@@ -1,0 +1,4 @@
+matplotlib>=3.8,<4
+numpy>=1.24,<3
+pyFEMM==0.1.3
+pywin32>=306; sys_platform == 'win32'
