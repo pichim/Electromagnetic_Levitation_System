@@ -1,4 +1,4 @@
-CROSS            ?= "C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/bin/win/arm-none-eabi/bin/arm-none-eabi-"
+CROSS            ?= "C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/bin/win/arm-none-eabi/bin/arm-none-eabi-"
 CFLAGS           := -Wall -O2 -c -g -fmessage-length=0 -DEXTERNAL_MODE=1 \
    -DPLX_RTBOX \
    -fgcse-after-reload \
@@ -24,15 +24,15 @@ CFLAGS           := -Wall -O2 -c -g -fmessage-length=0 -DEXTERNAL_MODE=1 \
 CC               = $(CROSS)gcc
 LD               = $(CROSS)ld
 STRIP            = $(CROSS)strip
-INCLUDE          := -I"C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/include/rtbox"
-LIBS             := "C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/bin/win/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.3.0/crti.o" \
-                    -L"C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/lib/rtbox" -L"C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/lib/rtbox/OpenAmp" \
-                    -L"C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/bin/win/arm-none-eabi/bin/../arm-none-eabi/lib" \
-                    -L"C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/bin/win/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.3.0" \
-                    -L"C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/lib/rtbox/Xilinx" -lplexim_hil -lopen_amp -lbaremetal_remote\
+INCLUDE          := -I"C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/include/rtbox"
+LIBS             := "C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/bin/win/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.3.0/crti.o" \
+                    -L"C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/lib/rtbox" -L"C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/lib/rtbox/OpenAmp" \
+                    -L"C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/bin/win/arm-none-eabi/bin/../arm-none-eabi/lib" \
+                    -L"C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/bin/win/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.3.0" \
+                    -L"C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/lib/rtbox/Xilinx" -lplexim_hil -lopen_amp -lbaremetal_remote\
                     -lm --start-group -lxil -lc -lgcc --end-group \
-                    "C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/bin/win/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.3.0/crtn.o"
-LFLAGS           := -T "C:/Users/nicol/OneDrive/Dokumente/Plexim/PLECS 5.0 (64 bit)/tsps/PLECS_RT_Box/PLECS_RT_Box/build/rtbox.ld"
+                    "C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/bin/win/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.3.0/crtn.o"
+LFLAGS           := -T "C:/Users/hanne/OneDrive - ZHAW/Dokumente/Plexim/PLECS 5.0 (64 bit)/coderTargets/PLECS_RT_Box/build/rtbox.ld"
 
 undefine GCC_EXEC_PREFIX
 

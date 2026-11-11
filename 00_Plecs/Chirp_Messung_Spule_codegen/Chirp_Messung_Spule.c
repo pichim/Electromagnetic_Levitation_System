@@ -2,7 +2,7 @@
  * Implementation file for: Chirp_Messung_Spule
  * Generated with         : PLECS 5.0.6
  *                          PLECS RT Box 1 4.0.8
- * Generated on           : 5 Nov 2026 16:04:50
+ * Generated on           : 11 Nov 2026 10:19:55
  */
 #include "Chirp_Messung_Spule.h"
 #ifndef PLECS_HEADER_Chirp_Messung_Spule_h_
@@ -127,12 +127,12 @@ Chirp_Messung_Spule_Parameters Chirp_Messung_Spule_P = {
    /* Parameter 'SwitchState' of
     *  Manual Signal Switch : 'Chirp_Messung_Spule/Manual Switch1'
     */
-   false
+   true
 };
 const char * Chirp_Messung_Spule_errorStatus;
 const double Chirp_Messung_Spule_sampleTime = 2.00000000000000016e-05;
 const char * const Chirp_Messung_Spule_checksum =
-   "0b343723db4772c04c5d5c6f58d405821505b025";
+   "92a63a994acbc644129ac28f9e8ad585ca46ae55";
 /* Target declarations */
 struct PlxDataCaptureRegistry plxDataCaptureRegistry[1];
 const int plxUseEthercat = 0;
@@ -306,7 +306,7 @@ void Chirp_Messung_Spule_step(void)
        (Chirp_Messung_Spule_B_ManualSwitch1))
    {
       Chirp_Messung_Spule_B_Monoflop = 1;
-      Chirp_Messung_Spule_D_uint32_t[0] = 1025000;
+      Chirp_Messung_Spule_D_uint32_t[0] = 3025000;
    }
    else if (Chirp_Messung_Spule_D_uint32_t[0] == 0)
    {
@@ -346,7 +346,7 @@ void Chirp_Messung_Spule_step(void)
     *  Sum : 'Chirp_Messung_Spule/Chirp/Sum1'
     */
    Chirp_Messung_Spule_B_LogicalOperator =
-      (Chirp_Messung_Spule_B_Sub > 0.5) && (Chirp_Messung_Spule_B_Sub < 20.5);
+      (Chirp_Messung_Spule_B_Sub > 0.5) && (Chirp_Messung_Spule_B_Sub < 60.5);
 
    /* Gain : 'Chirp_Messung_Spule/Gain1'
     * incorporates
@@ -370,21 +370,21 @@ void Chirp_Messung_Spule_step(void)
                                                Chirp_Messung_Spule_B_LogicalOperator
                                                > false) ? (8.*
                                                            sin(
-                                                               9.74196174945579152
+                                                               26.9702620651163301
                                                                *
                                                                ((
-                                                                 0.0500000000000000028
+                                                                 0.0170000000000000012
                                                                  *
                                                                  pow(
-                                                                     400000.,
+                                                                     1176470.58823529398,
                                                                      plecsmod(
                                                                               Chirp_Messung_Spule_B_Sub
                                                                               -
    0.5,
-                                                                              20.)
+                                                                              60.)
                                                                      /
-                                                                     20.))-
-   0.0500000000000000028))) : 0.) + 0.) : 0.);
+                                                                     60.))-
+   0.0170000000000000012))) : 0.) + 14.) : 0.);
 
    /* Product : 'Chirp_Messung_Spule/Product3' */
    Chirp_Messung_Spule_B_Product3 = 1. / Chirp_Messung_Spule_B_UZK_Nenner *
