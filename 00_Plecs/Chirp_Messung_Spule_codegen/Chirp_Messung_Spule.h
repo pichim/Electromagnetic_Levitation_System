@@ -2,7 +2,7 @@
  * Header file for: Chirp_Messung_Spule
  * Generated with : PLECS 5.0.6
  *                  PLECS RT Box 1 4.0.8
- * Generated on   : 5 Nov 2026 16:04:50
+ * Generated on   : 11 Nov 2026 10:19:55
  */
 #ifndef PLECS_HEADER_Chirp_Messung_Spule_h_
 #define PLECS_HEADER_Chirp_Messung_Spule_h_

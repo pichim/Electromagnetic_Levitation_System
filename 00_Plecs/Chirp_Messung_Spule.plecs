@@ -135,7 +135,7 @@ Plecs {
     Index         "4"
   }
   Schematic {
-    Location      [1, 29; 719, 808]
+    Location      [-2879, 408; -1922, 1366]
     ZoomFactor    0.999997
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -1145,7 +1145,7 @@ Plecs {
         Variable      "f1"
         Prompt        "Start Frequency [Hz]"
         Type          FreeText
-        Value         "0.05"
+        Value         "0.017"
         Show          off
         Tunable       on
         TabName       ""
@@ -1172,7 +1172,7 @@ Plecs {
         Variable      "offs"
         Prompt        "Offset"
         Type          FreeText
-        Value         "0"
+        Value         "14"
         Show          off
         Tunable       on
         TabName       ""
@@ -1190,7 +1190,7 @@ Plecs {
         Variable      "Tm"
         Prompt        "Sweep Time [s]"
         Type          FreeText
-        Value         "20"
+        Value         "60"
         Show          off
         Tunable       on
         TabName       ""
@@ -2475,11 +2475,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -20; 15, 20]
-      Location      [721, 29; 1439, 830]
+      Location      [801, 30; 1598, 996]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAQKAAAAY/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAABAoAAABEAP///wAAAs4AAAMCAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAABAoAAABEAP///wAAAx0AAAOnAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -2492,7 +2492,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
