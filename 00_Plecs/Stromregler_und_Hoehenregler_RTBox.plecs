@@ -31,19 +31,19 @@ Plecs {
   InitializationCommands base64 "JSBQV00gdW5kIEdydW5kc2Nocml0dHdlaXRlCmZwd20gP"
 "SA1MGUzOwpUc19jdHJsID0gMS9mcHdtOyAgICAgICAgICAlIDIwIHVzCgpSTCA9IDAuMTsKTEwgPS"
 "AxMDBlLTY7CgolIFVyc3Byw7xuZ2xpY2hlciBTaW11bGluay1Iw7ZoZW5yZWdsZXIgb2huZSBJLUF"
-"udGVpbApLcF9IID0gMS40MTM7CktkX0ggPSAwLjA2NTc7ClRmX0ggPSAwLjAwNDg2OTsKVDNfSCA9"
-"IDAuMDAxOTU7CgolIEFidGFzdHplaXQgZGVzIGRpc2tyZXRlbiBIw7ZoZW5yZWdsZXJzClRzX0ggP"
-"SAyKlRzX2N0cmw7ICAgJSA0MCDCtXMgYmVpIFRzX2N0cmwgPSAyMCDCtXMKCiUgRGlza3JldGUgS2"
-"9lZmZpemllbnRlbiBtaXQgVHVzdGluIGJlcmVjaG5lbgprX0ggPSAyL1RzX0g7CgpkRl9IID0gWzE"
-"gKyBrX0gqVGZfSCwgMSAtIGtfSCpUZl9IXTsKZDNfSCA9IFsxICsga19IKlQzX0gsIDEgLSBrX0gq"
-"VDNfSF07CmREX0ggPSBjb252KGRGX0gsIGRGX0gpOwoKYV9IID0gY29udihkRF9ILCBkM19IKTsKY"
-"l9IID0gS3BfSCphX0ggLi4uCiAgICArIEtkX0gqa19IKmNvbnYoWzEgMCAtMV0sIGQzX0gpIC4uLg"
-"ogICAgKyBjb252KFsxIDFdLCBkRF9IKTsKCm51bV9IID0gYl9IL2FfSCgxKTsKZGVuX0ggPSBhX0g"
-"vYV9IKDEpOwoKJSBLb2VmZml6aWVudGVuIGbDvHIgZGVuIGtvbnRpbnVpZXJsaWNoZW4gQmxvY2sg"
-"aW0gU2NoYWx0cGxhbgpkRF9zID0gW1RmX0heMiwgMipUZl9ILCAxXTsKZDNfcyA9IFtUM19ILCAxX"
-"TsKCmRlbl9IX3MgPSBjb252KGREX3MsIGQzX3MpOwpudW1fSF9zID0gS3BfSCpkZW5fSF9zIC4uLg"
-"ogICAgICAgICsgWzAsIGNvbnYoW0tkX0gsIDBdLCBkM19zKV0gLi4uCiAgICAgICAgKyBbMCwgZER"
-"fc107"
+"udGVpbApLcF9IID0gMS40MTM7CktkX0ggPSAwLjA2NTc7ClRmX0ggPSAwLjAwNDg2OTsKJVRmX0gg"
+"PSA4ZS0zOwpUM19IID0gMC4wMDE5NTsKCiUgQWJ0YXN0emVpdCBkZXMgZGlza3JldGVuIEjDtmhlb"
+"nJlZ2xlcnMKVHNfSCA9IDIqVHNfY3RybDsgICAlIDQwIMK1cyBiZWkgVHNfY3RybCA9IDIwIMK1cw"
+"oKJSBEaXNrcmV0ZSBLb2VmZml6aWVudGVuIG1pdCBUdXN0aW4gYmVyZWNobmVuCmtfSCA9IDIvVHN"
+"fSDsKCmRGX0ggPSBbMSArIGtfSCpUZl9ILCAxIC0ga19IKlRmX0hdOwpkM19IID0gWzEgKyBrX0gq"
+"VDNfSCwgMSAtIGtfSCpUM19IXTsKZERfSCA9IGNvbnYoZEZfSCwgZEZfSCk7CgphX0ggPSBjb252K"
+"GREX0gsIGQzX0gpOwpiX0ggPSBLcF9IKmFfSCAuLi4KICAgICsgS2RfSCprX0gqY29udihbMSAwIC"
+"0xXSwgZDNfSCkgLi4uCiAgICArIGNvbnYoWzEgMV0sIGREX0gpOwoKbnVtX0ggPSBiX0gvYV9IKDE"
+"pOwpkZW5fSCA9IGFfSC9hX0goMSk7CgolIEtvZWZmaXppZW50ZW4gZsO8ciBkZW4ga29udGludWll"
+"cmxpY2hlbiBCbG9jayBpbSBTY2hhbHRwbGFuCmREX3MgPSBbVGZfSF4yLCAyKlRmX0gsIDFdOwpkM"
+"19zID0gW1QzX0gsIDFdOwoKZGVuX0hfcyA9IGNvbnYoZERfcywgZDNfcyk7Cm51bV9IX3MgPSBLcF"
+"9IKmRlbl9IX3MgLi4uCiAgICAgICAgKyBbMCwgY29udihbS2RfSCwgMF0sIGQzX3MpXSAuLi4KICA"
+"gICAgICArIFswLCBkRF9zXTs="
   InitialState  "1"
   SystemState   ""
   JacobianComputation "2"
@@ -153,7 +153,7 @@ Plecs {
     Index         "5"
   }
   Schematic {
-    Location      [721, 29; 1439, 808]
+    Location      [0, 23; 1440, 810]
     ZoomFactor    0.873843
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -676,12 +676,12 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "101.7"
+        Value         "300"
         Show          off
       }
       Parameter {
         Variable      "ki"
-        Value         "816.8"
+        Value         "1.8850e+04"
         Show          off
       }
       Parameter {
@@ -721,12 +721,12 @@ Plecs {
       }
       Parameter {
         Variable      "up_limit"
-        Value         "24"
+        Value         "30"
         Show          off
       }
       Parameter {
         Variable      "low_limit"
-        Value         "-24"
+        Value         "-30"
         Show          off
       }
       Parameter {
@@ -966,11 +966,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -20; 15, 20]
-      Location      [0, 24; 1440, 833]
+      Location      [721, 29; 1439, 830]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAWgAAAAb/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABaAAAABEAP///wAABaAAAAKVAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAALOAAAAb/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAAs4AAABEAP///wAAAs4AAAKNAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -983,7 +983,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -2343,11 +2343,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -25; 15, 25]
-      Location      [0, 23; 1440, 832]
+      Location      [7, 30; 1433, 825]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAKgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABaAAAAMKAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABZIAAAL8AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -2360,7 +2360,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
