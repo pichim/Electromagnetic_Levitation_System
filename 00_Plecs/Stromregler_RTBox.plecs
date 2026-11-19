@@ -36,7 +36,8 @@ Plecs {
   TaskingMode   "1"
   TaskConfigurations ""
   CodeGenParameterInlining "2"
-  CodeGenInliningExceptions "AAAACwAAAAABAAAACgBLAF8AVQBfAEk="
+  CodeGenInliningExceptions "AAAACwAAAAACAAAACgBLAF8AVQBfAEkAAAAaAE0AYQBuAHUAY"
+"QBsACAAUwB3AGkAdABjAGg="
   CodeGenFloatingPointFormat "2"
   CodeGenAbsTimeUsageMsg "3"
   CodeGenBaseName ""
@@ -85,9 +86,9 @@ Plecs {
   ExternalModeSettings "AAAAfwAAAAAYQ29kZUdlblRhcmdldDo6U2V0dGluZ3MAAAAABwAAAB"
 "QARABlAGMAaQBtAGEAdABpAG8AbgAAAAIAMQAAABQATgB1AG0AUwBhAG0AcABsAGUAcwAAAAoAMQA"
 "wADAAMAAwAAAAFgBSAGUAZgByAGUAcwBoAFIAYQB0AGUAAAAEADIAMAAAABYAUwBlAG4AcwBpAHQA"
-"aQB2AGkAdAB5AAAAAgAwAAAAHABUAHIAaQBnAGcAZQByAEMAaABhAG4AbgBlAGwAAAAEAC0AMQAAA"
-"BgAVAByAGkAZwBnAGUAcgBEAGUAbABhAHkAAAAKAC0AMwAwADAAMAAAABgAVAByAGkAZwBnAGUAcg"
-"BWAGEAbAB1AGUAAAACADA="
+"aQB2AGkAdAB5AAAAAgAwAAAAHABUAHIAaQBnAGcAZQByAEMAaABhAG4AbgBlAGwAAAAEADEAMwAAA"
+"BgAVAByAGkAZwBnAGUAcgBEAGUAbABhAHkAAAAKAC0AMQAwADAAMAAAABgAVAByAGkAZwBnAGUAcg"
+"BWAGEAbAB1AGUAAAAIADIALgAzADU="
   AlgebraicLoopMethod "1"
   AlgebraicLoopTolerance "1e-6"
   ScriptsDialogGeometry "[1074 565 446 244]"
@@ -138,9 +139,9 @@ Plecs {
     Index         "5"
   }
   Schematic {
-    Location      [0, 23; 1440, 810]
+    Location      [1, 29; 719, 808]
     ZoomFactor    1.14436
-    SliderPosition [226, 0]
+    SliderPosition [-1, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -244,7 +245,7 @@ Plecs {
       SrcComponent  "PLECSRTBoxLib/Analog In1"
       Name          "IAB JL2_16"
       Show          on
-      Position      [70, 125]
+      Position      [35, 125]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -358,7 +359,7 @@ Plecs {
       SrcComponent  "PLECSRTBoxLib/Analog In1"
       Name          "ICD  JL2_14"
       Show          on
-      Position      [70, 280]
+      Position      [35, 280]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -617,12 +618,12 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "101.7"
+        Value         "300"
         Show          off
       }
       Parameter {
         Variable      "ki"
-        Value         "816.8"
+        Value         "1.8850e+04"
         Show          off
       }
       Parameter {
@@ -662,12 +663,12 @@ Plecs {
       }
       Parameter {
         Variable      "up_limit"
-        Value         "24"
+        Value         "30"
         Show          off
       }
       Parameter {
         Variable      "low_limit"
-        Value         "-24"
+        Value         "-30"
         Show          off
       }
       Parameter {
@@ -907,11 +908,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -20; 15, 20]
-      Location      [525, 29; 1439, 830]
+      Location      [0, 23; 1440, 832]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAOSAAAAb/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA5IAAABEAP///wAAA5IAAAKNAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAWgAAAAb/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABaAAAABEAP///wAABaAAAAKVAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1242,7 +1243,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "K"
-        Value         "-0.8"
+        Value         "1"
         Show          off
       }
       Parameter {
@@ -1271,7 +1272,7 @@ Plecs {
       SrcComponent  "PLECSRTBoxLib/Analog In1"
       Name          "U_Simulink"
       Show          on
-      Position      [70, 400]
+      Position      [255, 520]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1554,26 +1555,6 @@ Plecs {
     }
     Component {
       Type          Constant
-      Name          "Constant"
-      Show          on
-      Position      [760, 170]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Frame         [-10, -10; 10, 10]
-      Parameter {
-        Variable      "Value"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "DataType"
-        Value         "10"
-        Show          off
-      }
-    }
-    Component {
-      Type          Constant
       Name          "U_Test"
       Show          on
       Position      [690, 505]
@@ -1670,14 +1651,14 @@ Plecs {
       Type          Constant
       Name          "I_Test"
       Show          on
-      Position      [150, 505]
+      Position      [35, 385]
       Direction     right
       Flipped       off
       LabelPosition south
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
-        Value         "3"
+        Value         "2.4"
         Show          off
       }
       Parameter {
@@ -1722,6 +1703,69 @@ Plecs {
       Parameter {
         Variable      "LowerLimit"
         Value         "-0.9"
+        Show          off
+      }
+    }
+    Component {
+      Type          Sum
+      Name          "Sum1"
+      Show          off
+      Position      [95, 125]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "IconShape"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "++"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "11"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataTypeOverflowMode"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          ManualSignalSwitch
+      Name          "Manual Switch"
+      Show          on
+      Position      [80, 400]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "SwitchState"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Constant"
+      Show          on
+      Position      [35, 435]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "2.3"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
         Show          off
       }
     }
@@ -1903,9 +1947,16 @@ Plecs {
       Branch {
         Points        [730, 185]
         Branch {
-          Points        [730, 145; 790, 145]
-          DstComponent  "Mux"
-          DstTerminal   2
+          Points        [730, 170]
+          Branch {
+            Points        [730, 145; 790, 145]
+            DstComponent  "Mux"
+            DstTerminal   2
+          }
+          Branch {
+            DstComponent  "Mux"
+            DstTerminal   3
+          }
         }
         Branch {
           Points        [730, 200; 790, 200]
@@ -1957,27 +2008,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Constant"
-      SrcTerminal   1
-      DstComponent  "Mux"
-      DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "ICD  JL2_14"
-      SrcTerminal   1
-      DstComponent  "Display"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "IAB JL2_16"
-      SrcTerminal   1
-      DstComponent  "I_Filter(fg=500)"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "I_Filter(fg=500)"
       SrcTerminal   2
       DstComponent  "Sum"
@@ -2015,13 +2045,13 @@ Plecs {
       Type          Signal
       SrcComponent  "I_Offset"
       SrcTerminal   1
-      Points        [220, 190; 220, 165; 215, 165; 215, 135]
+      Points        [220, 190; 220, 165; 215, 165]
       DstComponent  "Sum"
       DstTerminal   3
     }
     Connection {
       Type          Signal
-      SrcComponent  "U_Simulink"
+      SrcComponent  "Manual Switch"
       SrcTerminal   1
       Points        [140, 400]
       Branch {
@@ -2047,6 +2077,48 @@ Plecs {
       SrcTerminal   2
       DstComponent  "I_Soll_Begrenzung"
       DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum1"
+      SrcTerminal   1
+      DstComponent  "I_Filter(fg=500)"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "IAB JL2_16"
+      SrcTerminal   1
+      DstComponent  "Sum1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "ICD  JL2_14"
+      SrcTerminal   1
+      Points        [65, 280]
+      Branch {
+        DstComponent  "Display"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "Sum1"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "I_Test"
+      SrcTerminal   1
+      DstComponent  "Manual Switch"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant"
+      SrcTerminal   1
+      DstComponent  "Manual Switch"
+      DstTerminal   3
     }
   }
 }
