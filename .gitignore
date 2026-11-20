@@ -3,3 +3,5 @@ __pycache__/
 .env
 **/02_FEMM_Simulation_Spule/Ergebniss_Systemdynamik/**
 /04_3D_Design/BG_Gesammt.stl
+/00_Plecs/*_codegen/
+/04_3D_Design/**/OldVersions/**
