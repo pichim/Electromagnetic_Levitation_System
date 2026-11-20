@@ -139,7 +139,7 @@ Plecs {
     Index         "5"
   }
   Schematic {
-    Location      [1, 29; 719, 808]
+    Location      [-2879, 408; -1922, 1366]
     ZoomFactor    1.14436
     SliderPosition [-1, 0]
     ShowBrowser   off
@@ -618,12 +618,12 @@ Plecs {
       }
       Parameter {
         Variable      "kp"
-        Value         "300"
+        Value         "150"
         Show          off
       }
       Parameter {
         Variable      "ki"
-        Value         "1.8850e+04"
+        Value         "1.8850e+05"
         Show          off
       }
       Parameter {
@@ -908,11 +908,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -20; 15, 20]
-      Location      [0, 23; 1440, 832]
+      Location      [-1919, 408; -962, 1388]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAWgAAAAb/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABaAAAABEAP///wAABaAAAAKVAAAA"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAO9AAAAb/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA70AAABEAP///wAAA70AAANAAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -925,7 +925,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1745,7 +1745,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "SwitchState"
-        Value         "2"
+        Value         "1"
         Show          off
       }
     }

@@ -4,7 +4,7 @@ clc, clear variables, close all;
 Ts = 1 / 50e3; % Sampling time
 
 % Load data
-load 'Messungen/Chirp_NewSpule_60s_14Offset.mat'; % -> data (3 x 2840000)
+load 'Messungen/Chirp_NewSpule2_60s_8Offset.mat'; % -> data (3 x 2840000)
 % Messungen mit 0.5*Arbeitspunkt haben das beste Ergebnis geliefert
 data_raw = data;
 clear data
@@ -20,7 +20,7 @@ idx_cut = data.values(:, idx.enable) > 0.5;
 data.values = data.values(idx_cut, :);
 data.time   = data.time(idx_cut, :);
 data.time = data.time - data.time(1);
-N = length(data.values)
+N = length(data.values)/2
 
 figure(1)
 subplot(311)
@@ -77,7 +77,7 @@ end
 
 s = tf('s');
 G = fselect(G, 0, 1e4); % Delete all frequencies above 1kHz 
-Kp = 100;
+Kp = 150;
 Tn = 1 / (2*pi * 200);
 Ki = Kp/Tn;
 Ci = Kp + Ki / s;
@@ -93,6 +93,7 @@ opts.PhaseWrappingBranch = -360;    % Phase wird in [-360°, 0°) gehalten
 
 figure(4)
 bode(L, 2*pi*G.Frequency, opts), grid on
+
 legend('L', 'G');
 title('Loop')
 
