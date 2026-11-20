@@ -160,9 +160,9 @@ Plecs {
     Index         "6"
   }
   Schematic {
-    Location      [0, 23; 1440, 810]
-    ZoomFactor    0.873843
-    SliderPosition [176, 2]
+    Location      [-1919, 408; -962, 1366]
+    ZoomFactor    1.30957
+    SliderPosition [149, 82]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -1147,7 +1147,7 @@ Plecs {
       SrcComponent  "PLECSRTBoxLib/Digital In1"
       Name          "Digital In4"
       Show          off
-      Position      [535, 180]
+      Position      [515, 145]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1177,7 +1177,7 @@ Plecs {
       Type          Display
       Name          "Display5"
       Show          off
-      Position      [685, 145]
+      Position      [705, 110]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1500,7 +1500,7 @@ Plecs {
       }
       Parameter {
         Variable      "Inputs"
-        Value         "3"
+        Value         "4"
         Show          off
       }
     }
@@ -4447,7 +4447,7 @@ Plecs {
       SrcComponent  "PLECSRTBoxLib/Analog In1"
       Name          "U_Temp"
       Show          on
-      Position      [455, 245]
+      Position      [385, 245]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -4502,20 +4502,20 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [535, 305]
+      Position      [480, 305]
       Direction     up
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 23; 1440, 832]
+      Location      [-2879, 408; -1922, 1388]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABaAAAAMKAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA70AAAO1AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":64,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":106,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
       Axes          "1"
@@ -4558,9 +4558,49 @@ Plecs {
     }
     Component {
       Type          ConstantRelationalOperator
-      Name          "Compare to\nConstant"
+      Name          ">2.25"
       Show          on
-      Position      [545, 245]
+      Position      [480, 230]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-20, -10; 20, 10]
+      Parameter {
+        Variable      "Operator"
+        Value         "5"
+        Show          off
+      }
+      Parameter {
+        Variable      "Threshold"
+        Value         "2.25"
+        Show          off
+      }
+    }
+    Component {
+      Type          Display
+      Name          "Display8"
+      Show          on
+      Position      [555, 200]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-16, -11; 16, 11]
+      Parameter {
+        Variable      "Notation"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Precision"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          ConstantRelationalOperator
+      Name          "<2.5"
+      Show          on
+      Position      [480, 265]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4572,7 +4612,27 @@ Plecs {
       }
       Parameter {
         Variable      "Threshold"
-        Value         "2.25"
+        Value         "2.5"
+        Show          off
+      }
+    }
+    Component {
+      Type          Display
+      Name          "Display9"
+      Show          on
+      Position      [555, 245]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-16, -11; 16, 11]
+      Parameter {
+        Variable      "Notation"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Precision"
+        Value         "1"
         Show          off
       }
     }
@@ -4660,13 +4720,14 @@ Plecs {
       Type          Signal
       SrcComponent  "Digital In4"
       SrcTerminal   1
-      Points        [585, 180]
+      Points        [585, 145]
       Branch {
-        Points        [585, 145]
+        Points        [585, 110]
         DstComponent  "Display5"
         DstTerminal   1
       }
       Branch {
+        Points        [585, 150; 635, 150]
         DstComponent  "Freigabe"
         DstTerminal   2
       }
@@ -4765,20 +4826,6 @@ Plecs {
       SrcTerminal   1
       DstComponent  "Reset_PI"
       DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Spannung_OK"
-      SrcTerminal   2
-      Points        [635, 305; 635, 285]
-      Branch {
-        DstComponent  "Freigabe"
-        DstTerminal   3
-      }
-      Branch {
-        DstComponent  "Display2"
-        DstTerminal   1
-      }
     }
     Connection {
       Type          Signal
@@ -5265,24 +5312,70 @@ Plecs {
       Type          Signal
       SrcComponent  "U_Temp"
       SrcTerminal   1
-      Points        [485, 245]
+      Points        [440, 245]
       Branch {
-        Points        [485, 305]
-        DstComponent  "Scope1"
-        DstTerminal   1
+        Points        [440, 265]
+        Branch {
+          Points        [440, 305]
+          DstComponent  "Scope1"
+          DstTerminal   1
+        }
+        Branch {
+          DstComponent  "<2.5"
+          DstTerminal   1
+        }
       }
       Branch {
-        DstComponent  "Compare to\nConstant"
+        Points        [440, 230]
+        DstComponent  ">2.25"
         DstTerminal   1
       }
     }
     Connection {
       Type          Signal
-      SrcComponent  "Compare to\nConstant"
+      SrcComponent  ">2.25"
       SrcTerminal   2
-      Points        [585, 245; 585, 200]
-      DstComponent  "Freigabe"
-      DstTerminal   4
+      Points        [515, 230]
+      Branch {
+        Points        [515, 200]
+        DstComponent  "Display8"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [605, 230; 605, 185]
+        DstComponent  "Freigabe"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Spannung_OK"
+      SrcTerminal   2
+      Points        [635, 305; 635, 285]
+      Branch {
+        DstComponent  "Display2"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "Freigabe"
+        DstTerminal   5
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "<2.5"
+      SrcTerminal   2
+      Points        [520, 265]
+      Branch {
+        Points        [520, 275; 615, 275; 615, 195]
+        DstComponent  "Freigabe"
+        DstTerminal   4
+      }
+      Branch {
+        Points        [520, 245]
+        DstComponent  "Display9"
+        DstTerminal   1
+      }
     }
     RectangleAnnotation {
       Position     [255, 870]
