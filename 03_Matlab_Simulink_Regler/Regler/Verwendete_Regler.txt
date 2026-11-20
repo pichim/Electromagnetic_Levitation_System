@@ -1,0 +1,16 @@
+Stromregler alter Aufbau:
+Kp = 300;
+Tn = 1 / (2*pi * 10);
+Ki = Kp/Tn;
+Ci = Kp + Ki / s;
+
+Stromregler neuer Aufbau:
+
+Kp = 100;
+Tn = 1 / (2*pi * wb);
+	- wb = 50: 75deg Phasenreserve
+	- wb = 100: 60deg Phasenreserve
+	- wb = 200: 41deg Phasenreserve
+	
+Ki = Kp/Tn;
+Ci = Kp + Ki / s;

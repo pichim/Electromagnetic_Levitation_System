@@ -1,6 +1,6 @@
 %% Daten einlesen
 close all; clear; clc;
-load('Chirp_Spule_20kHz.mat');          % -> data (3 x 2840000)
+load('Messungen/Chirp_NewSpule_60s_14Offset.mat');          % -> data (3 x 2840000)
 fs = 50e3;                         
 u  = double(data(1,:));           % Chirp-Spannung
 y  = double(data(2,:));           % Antwort (Strom?)
@@ -30,13 +30,13 @@ subplot(2,1,1);
 semilogx(f, 20*log10(abs(H))); 
 grid on; 
 ylabel('|H| / dB');
-xlim([1e-1 1e3])
+xlim([1e-1 1e4])
 
 
 subplot(2,1,2); 
 semilogx(f, unwrap(angle(H))*180/pi); grid on;
 ylabel('Phase / °'); xlabel('f / Hz'); xlim([1 fs/2]);
-xlim([1e-1 1e3])
+xlim([1e-1 1e4])
 ylim([-250 180])
 
 %% Frd Objekt erzeugen
@@ -50,29 +50,27 @@ figure(3)
 bode(G)
 grid on;
 ylim([-250 100])
-%% Spulen Regler Dimensionierung
-% Lead Regler, Frequenzkennlinienverfahren
-close all; 
 
+
+%% Modell
+if isgraphics(4, 'figure')
+    close(4);
+end
 s = tf('s');
+R = 3.3
+L = 0.25
+R_sim = 2.71
+L_sim = 0.403
+G_mod = 1 / (R + L*s)
+G_sim = 1 / (R_sim + L_sim*s)
 
-kp = 1
-ki = 1
-
-C = kp + ki*s
-
-
-%%
 figure(4)
-bode(G,C*G,C)
-legend('G', 'C*G', 'C')
-xlim([1e-1 1e3])
-ylim([-250 100])
 grid on
+bode(G, G_mod, G_sim)
+legend('Messung', 'Annäherung', 'Simulation')
 
-figure(5)
-margin(G)
-xlim([1e-1 1e3])
-ylim([-250 100])
-legend('C*G')
-grid on;
+%
+sys = tfest(G, 1, 0);        % 1 Pol, 0 Nullstellen
+[num, den] = tfdata(sys, 'v');   % G = num / (den(1)*s + den(2))
+R = num / den(2)                % DC-Verstärkung = 1/R
+L = den(1) * R                  % bei Normierung num/(L*s + R)

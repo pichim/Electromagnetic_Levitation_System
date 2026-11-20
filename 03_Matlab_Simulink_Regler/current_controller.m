@@ -4,7 +4,7 @@ clc, clear variables, close all;
 Ts = 1 / 50e3; % Sampling time
 
 % Load data
-load 'Messungen'/Chirp_Spule_60s_05Offset.mat; % -> data (3 x 2840000)
+load 'Messungen/Chirp_NewSpule_60s_14Offset.mat'; % -> data (3 x 2840000)
 % Messungen mit 0.5*Arbeitspunkt haben das beste Ergebnis geliefert
 data_raw = data;
 clear data
@@ -50,8 +50,12 @@ c = mscohere(data.values(:, idx.inp), ...
 G = frd(g, f, 'Units', 'Hz'); % Time continous
 C = frd(c, f, 'Units', 'Hz');
 
+opts = bodeoptions;
+opts.PhaseWrapping = 'on';          % Wrapping aktivieren
+opts.PhaseWrappingBranch = -360;    % Phase wird in [-360°, 0°) gehalten
+
 figure(2)
-bode(G, 2*pi*G.Frequency), grid on
+bode(G, 2*pi*G.Frequency, opts), grid on
 title('Plant')
 
 opt = bodeoptions('cstprefs');
@@ -72,9 +76,9 @@ if isgraphics(5, 'figure')
 end
 
 s = tf('s');
-G = fselect(G, 0, 1e3); % Delete all frequencies above 1kHz 
-Kp = 300;
-Tn = 1 / (2*pi * 10);
+G = fselect(G, 0, 1e4); % Delete all frequencies above 1kHz 
+Kp = 100;
+Tn = 1 / (2*pi * 200);
 Ki = Kp/Tn;
 Ci = Kp + Ki / s;
 
@@ -104,7 +108,7 @@ if isgraphics(6, 'figure')
 end
 figure(6)
 margin(L, opts), grid on
-xlim([1e0 1e4])
+xlim([1e0 1e5])
 legend('L');
 title('Loop')
 
@@ -113,7 +117,7 @@ if isgraphics(7, 'figure')
     close(7);
 end
 figure(7)
-bode(L,G, Ci, opts), grid on
-xlim([1e0 1e4])
-legend('L','G','Ci');
+bode(L, Ci, opts), grid on
+xlim([1e0 1e5])
+legend('L','Ci');
 title('Loop')
