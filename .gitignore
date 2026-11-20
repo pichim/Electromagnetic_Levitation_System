@@ -1,3 +1,4 @@
 venv/
 __pycache__/
 .env
+**/02_FEMM_Simulation_Spule/Ergebniss_Systemdynamik/**
