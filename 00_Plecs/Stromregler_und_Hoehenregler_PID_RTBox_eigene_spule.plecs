@@ -1,7 +1,7 @@
 Plecs {
   Name          "Stromregler_und_Hoehenregler_PID_RTBox_eigene_spule"
   Version       "5.0"
-  CircuitModel  "ContStateSpace"
+  CircuitModel  "DiscStateSpace"
   StartTime     "0.0"
   TimeSpan      "1.0"
   Timeout       ""
@@ -160,9 +160,9 @@ Plecs {
     Index         "6"
   }
   Schematic {
-    Location      [-2879, 408; -1292, 1366]
-    ZoomFactor    1.14436
-    SliderPosition [0, 20]
+    Location      [-2879, 408; -1674, 1366]
+    ZoomFactor    0.873841
+    SliderPosition [18, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -1500,7 +1500,7 @@ Plecs {
       }
       Parameter {
         Variable      "Inputs"
-        Value         "5"
+        Value         "6"
         Show          off
       }
     }
@@ -1996,7 +1996,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "DialogGeometry"
-        Value         "[-2158 637 456 516]"
+        Value         "[-2570 640 456 516]"
         Show          off
       }
       Parameter {
@@ -2295,15 +2295,15 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -25; 15, 25]
-      Location      [0, 24; 1440, 833]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAKgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABaAAAAMKAAAA"
+      Location      [169, 220; 1110, 966]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADvfwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAKgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAA0AA"
+"AAeAAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAA70AAABiAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA60AAALLAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":169,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":155,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -2549,7 +2549,7 @@ Plecs {
       Type          Sum
       Name          "Sum4"
       Show          off
-      Position      [865, 625]
+      Position      [870, 625]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2584,7 +2584,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "DialogGeometry"
-        Value         "[846 136 456 516]"
+        Value         "[-2570 640 456 516]"
         Show          off
       }
       Parameter {
@@ -2821,7 +2821,7 @@ Plecs {
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
-        Value         "3"
+        Value         "2"
         Show          off
       }
       Parameter {
@@ -4474,19 +4474,19 @@ Plecs {
       Type          TransferFunction
       Name          "Transfer Fcn"
       Show          on
-      Position      [790, 620]
+      Position      [795, 620]
       Direction     right
       Flipped       off
       LabelPosition south
       Frame         [-30, -15; 30, 15]
       Parameter {
         Variable      "Numerator"
-        Value         "[0.2516    3.1623]"
+        Value         "[0 0 0.3168 4.0128 0.39811]"
         Show          off
       }
       Parameter {
         Variable      "Denominator"
-        Value         "[0.0239    1.0000]"
+        Value         "[6.3662e-08 6.7662e-05 0.019915 1 0]"
         Show          off
       }
       Parameter {
@@ -4499,7 +4499,7 @@ Plecs {
       Type          DiscreteTransferFunction
       Name          "Hoehenregler_500Hz"
       Show          on
-      Position      [1080, 530]
+      Position      [345, 35]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4591,11 +4591,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [101, 261; 1175, 762]
+      Location      [91, 64; 1048, 1044]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABDIAAAHWAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAA70AAAO1AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -5075,6 +5075,76 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Goto
+      Name          "Goto12"
+      Show          off
+      Position      [400, 670]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "Ball_Detect"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "CustomMessage"
+        Value         ""
+        Show          off
+        Evaluate      on
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From13"
+      Show          off
+      Position      [530, 265]
+      Direction     right
+      Flipped       off
+      LabelPosition north
+      Parameter {
+        Variable      "Tag"
+        Value         "Ball_Detect"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "CustomMessage"
+        Value         ""
+        Show          off
+        Evaluate      on
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
+      }
+    }
     Connection {
       Type          Signal
       SrcComponent  "UZK JL2_8"
@@ -5459,33 +5529,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Ball_Detection"
-      SrcTerminal   2
-      Points        [460, 695]
-      Branch {
-        Points        [460, 640; 575, 640; 575, 625; 685, 625]
-        Branch {
-          DstComponent  "Product"
-          DstTerminal   3
-        }
-        Branch {
-          Points        [685, 560; 735, 560; 735, 490]
-          DstComponent  "Scope"
-          DstTerminal   2
-        }
-      }
-      Branch {
-        Points        [460, 765]
-        DstComponent  "Logical\nOperator"
-        DstTerminal   3
-      }
-      Branch {
-        DstComponent  "Ball_erkannt"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "Saturation1"
       SrcTerminal   2
       DstComponent  "Goto"
@@ -5539,7 +5582,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum4"
       SrcTerminal   1
-      Points        [885, 625]
+      Points        [890, 625]
       Branch {
         Points        [895, 625]
         Branch {
@@ -5561,7 +5604,7 @@ Plecs {
         }
       }
       Branch {
-        Points        [885, 765; 705, 765]
+        Points        [885, 625; 885, 765; 705, 765]
         DstComponent  "I_Anteil_Hoehe"
         DstTerminal   2
       }
@@ -5612,14 +5655,6 @@ Plecs {
       Points        [535, 750; 535, 755]
       DstComponent  "Logical\nOperator"
       DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "I_Anteil_Hoehe"
-      SrcTerminal   5
-      Points        [830, 720; 830, 630]
-      DstComponent  "Sum4"
-      DstTerminal   3
     }
     Connection {
       Type          Signal
@@ -5819,7 +5854,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From9"
       SrcTerminal   1
-      Points        [620, 185; 620, 180]
+      Points        [620, 185; 620, 175]
       DstComponent  "Freigabe"
       DstTerminal   3
     }
@@ -5827,7 +5862,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From11"
       SrcTerminal   1
-      Points        [620, 205; 620, 190]
+      Points        [615, 205; 615, 185]
       DstComponent  "Freigabe"
       DstTerminal   4
     }
@@ -5845,22 +5880,6 @@ Plecs {
       Points        [1200, 290; 1200, 250]
       DstComponent  "Sum5"
       DstTerminal   3
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Sum5"
-      SrcTerminal   1
-      Points        [1265, 245]
-      Branch {
-        Points        [1265, 220]
-        DstComponent  "Scope1"
-        DstTerminal   2
-      }
-      Branch {
-        Points        [1265, 270]
-        DstComponent  "Display10"
-        DstTerminal   1
-      }
     }
     Connection {
       Type          Signal
@@ -5895,9 +5914,75 @@ Plecs {
       Type          Signal
       SrcComponent  "Disable: Kugel unten"
       SrcTerminal   2
-      Points        [625, 225; 625, 210]
+      Points        [625, 225; 625, 205]
       DstComponent  "Freigabe"
       DstTerminal   6
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum5"
+      SrcTerminal   1
+      Points        [1265, 245]
+      Branch {
+        Points        [1265, 220]
+        DstComponent  "Scope1"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [1265, 270]
+        DstComponent  "Display10"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Ball_Detection"
+      SrcTerminal   2
+      Points        [380, 695]
+      Branch {
+        Points        [460, 695]
+        Branch {
+          Points        [460, 640; 575, 640; 575, 625; 685, 625]
+          Branch {
+            DstComponent  "Product"
+            DstTerminal   3
+          }
+          Branch {
+            Points        [685, 560; 735, 560; 735, 490]
+            DstComponent  "Scope"
+            DstTerminal   2
+          }
+        }
+        Branch {
+          Points        [460, 765]
+          DstComponent  "Logical\nOperator"
+          DstTerminal   3
+        }
+        Branch {
+          DstComponent  "Ball_erkannt"
+          DstTerminal   1
+        }
+      }
+      Branch {
+        DstComponent  "Goto12"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From13"
+      SrcTerminal   1
+      Points        [630, 265; 630, 215]
+      DstComponent  "Freigabe"
+      DstTerminal   7
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "I_Anteil_Hoehe"
+      SrcTerminal   5
+      Points        [800, 720; 800, 715; 835, 715; 835, 630]
+      DstComponent  "Sum4"
+      DstTerminal   3
     }
     RectangleAnnotation {
       Position     [255, 870]
@@ -5936,6 +6021,11 @@ Plecs {
       PenAlpha     1
       BrushColor   0
       BrushAlpha   0
+    } 
+    Annotation {
+      Name          "<html><body>\n<p><span style=\" font-size:8px;\">Disable "
+"Kugel weg</span></p></body></html>"
+      Position      [575, 270]
     } 
   }
 }

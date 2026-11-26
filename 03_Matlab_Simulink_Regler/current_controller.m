@@ -1,4 +1,5 @@
 clc, clear variables, close all;
+set(groot, 'DefaultLineLineWidth', 1.5);
 %% Load and prepare data
 
 Ts = 1 / 50e3; % Sampling time

@@ -1,5 +1,7 @@
 %% Daten einlesen
 close all; clear; clc;
+set(groot, 'DefaultLineLineWidth', 1.5);
+
 load('Messungen/Chirp_NewSpule_60s_14Offset.mat');          % -> data (3 x 2840000)
 fs = 50e3;                         
 u  = double(data(1,:));           % Chirp-Spannung

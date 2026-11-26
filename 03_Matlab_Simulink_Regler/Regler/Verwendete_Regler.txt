@@ -14,3 +14,37 @@ Tn = 1 / (2*pi * wb);
 	
 Ki = Kp/Tn;
 Ci = Kp + Ki / s;
+
+
+Höhenregler kleine Kugel ohne Hülle:
+- Lead Regler 
+- AP soll: 2cm
+- AP ist: 3.3cm
+- I: 3.4A
+num: [0.22428 2.8184]
+denum: [0.023873 1]
+
+Höhenregler kleine Kugel mit Hülle:
+- AP soll: 1cm
+- AP ist: 2cm
+- I: 3.4A
+num: [0.3168 3.9811]
+denum: [0.023873 1]
+
+Höhenregler kleine Kugel mit Hülle:
+- Lead + PI Regler 
+- AP soll: 2cm
+- AP ist: 2cm
+- I: 3.4A
+num: [0.3168 4.0128 0.39811]
+denum: [0.015915 1 0] für a = 0.2
+
+	   
+Höhenregler kleine Kugel mit Hülle:
+- Lead + PI Regler + T2
+- AP soll: 2cm
+- AP ist: 2cm
+- I: 3.3A
+- Wenig spulengeräusche
+num: [0 0 0.3168 4.0128 0.39811]
+denum: [6.3662e-08 6.7662e-05 0.019915 1 0]

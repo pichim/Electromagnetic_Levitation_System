@@ -1,24 +1,34 @@
-clear;
+%%
+clear; close all; clc;
+set(groot, 'DefaultLineLineWidth', 1.5);
 
-Ts = 1 / 50e3; % Sampling time
+s = tf('s')
 
-% Load raw data (matrix of size 3 x 2840000)
-load('Messungen/Chirp_NewSpule2_60s_8Offset.mat');
+C = 1 / (s ) 
 
-% Convert raw matrix into struct with time and values (N x 3)
-data_raw = double(data);
-clear data;
+figure(1)
 
-data.values = data_raw.';
-data.time   = (0:size(data.values, 1)-1).' * Ts;
+subplot(2,3,1)
+bode(s+1)
+title('s+1')
 
-% Keep only the first half of samples
-n_total  = size(data.values, 1);
-half_end = floor(n_total / 2);
+subplot(2,3,2)
+bode(s-1)
+title('s-1')
 
-data.values = data.values(1:half_end, :);
-data.time   = data.time(1:half_end, :);
-N_half      = size(data.values, 1);
+subplot(2,3,3)
+bode(s)
+title('s')
 
-% Save processed struct to a new MAT file
-save('Messungen/Chirp_NewSpule2_60s_8Offset_cut.mat', 'data');
+subplot(2,3,4)
+bode(1/s)
+title('1/s')
+
+subplot(2,3,5)
+bode(1/(s+1))
+title('1/(s+1)')
+
+subplot(2,3,6)
+bode(1/(s-1))
+title('1/(s-1)')
+
